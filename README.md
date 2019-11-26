@@ -42,3 +42,29 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## imagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|photo|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foregin_key: true|
+
+### Association
+
+- belongs_to :user
+- belongs_to :group
+
+### commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+
+- belongs_to :user
+- belongs_to :group
